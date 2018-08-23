@@ -2,9 +2,17 @@
 // const mainHeading = document.querySelector('.header');
 const hamburger = document.querySelector('.hamburger');
 const mainNav = document.querySelector('.main-nav');
+let expanded = false;
 const toggleMenu = () => {
     console.log(mainNav);
     mainNav.classList.toggle('x-expand');
+    if(expanded) {
+        hamburger.src = "img/nav-hamburger.png";
+    } else {
+        hamburger.src = "img/nav-hamburger-close.png";
+
+    }
+    expanded = !expanded;
 }
 hamburger.addEventListener('click', toggleMenu);
 
